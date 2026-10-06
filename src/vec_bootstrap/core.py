@@ -163,7 +163,7 @@ def summarize(
                         raw_delta_mean=r_int.mean,
                         raw_delta_low=r_int.low,
                         raw_delta_high=r_int.high,
-                        p_b_better=float(np.mean(np.asarray(paired) > 0)),
+                        b_better_fraction=float(np.mean(np.asarray(paired) > 0)),
                     )
         rows.append(row)
     return rows
