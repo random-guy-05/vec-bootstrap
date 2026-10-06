@@ -186,7 +186,7 @@ def main(argv: list[str] | None = None) -> int:
             "hidden-test generalization."
         ),
         "",
-        "| metric | direction | A mean [CI] | B mean [CI] | P(B better) |",
+        "| metric | direction | A mean [CI] | B mean [CI] | bootstrap B-better fraction |",
         "|---|---|---|---|---:|",
     ]
     for row in rows:
@@ -200,8 +200,8 @@ def main(argv: list[str] | None = None) -> int:
                 f"[{row['b_low']:.5g}, {row['b_high']:.5g}]"
             )
             p = (
-                f"{row.get('p_b_better', float('nan')):.3f}"
-                if "p_b_better" in row
+                f"{row.get('b_better_fraction', float('nan')):.3f}"
+                if "b_better_fraction" in row
                 else "—"
             )
         else:
