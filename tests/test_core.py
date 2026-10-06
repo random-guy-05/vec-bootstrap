@@ -29,7 +29,7 @@ def test_directional_improvement():
     assert improvement_delta(-0.5, -0.1, "zero") > 0
 
 
-def test_paired_summary_reports_probability_b_better():
+def test_paired_summary_reports_bootstrap_win_fraction():
     records = [
         {
             "A": {"de_score": 0.2, "mmd_u": 0.4},
@@ -41,5 +41,5 @@ def test_paired_summary_reports_probability_b_better():
         },
     ]
     rows = {row["metric"]: row for row in summarize(records, "T1", 0.95)}
-    assert rows["de_score"]["p_b_better"] == 1.0
+    assert rows["de_score"]["b_better_fraction"] == 1.0
     assert rows["mmd_u"]["p_b_better"] == 1.0
