@@ -21,7 +21,7 @@ For a ranking metric in A/B mode, VEC Bootstrap also computes an **improvement-o
 - lower-is-better: `A - B`;
 - zero-is-best: `abs(A) - abs(B)`.
 
-Positive means B improved under the official metric direction. `P(B better)` is the fraction of paired bootstrap replicates whose improvement-oriented delta is positive. It is a descriptive bootstrap frequency, **not a calibrated probability of winning the hidden leaderboard**.
+Positive means B improved under the official metric direction. `bootstrap B-better fraction` is the fraction of paired bootstrap replicates whose improvement-oriented delta is positive. It is a descriptive bootstrap frequency, **not a calibrated probability of winning the hidden leaderboard**.
 
 ## What the interval does not include
 
