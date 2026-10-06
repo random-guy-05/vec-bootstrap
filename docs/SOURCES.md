@@ -1,6 +1,6 @@
 # Source contract
 
-Verified **2026-10-01**. The official Virtual Embryo Challenge website and public scorer are authoritative if anything changes after this snapshot.
+Verified **2026-10-05**. The official Virtual Embryo Challenge website and public scorer are authoritative if anything changes after this snapshot.
 
 - Challenge overview/timeline: https://virtualembryo.ai/challenge
 - Tasks and official split structure: https://virtualembryo.ai/challenge/tasks
