@@ -4,7 +4,7 @@
 
 `vec-bootstrap` repeatedly resamples cells **with replacement** from the prediction, pseudo-target, and reference/WT files, reruns the real public `veckit==0.1.2` scorer, and reports percentile confidence intervals for every numeric metric.
 
-With two predictions, it performs a **paired comparison**: both models see the same bootstrap target/reference draw and the same scorer seed in each replicate. It then reports the probability that model B beats model A using each ranking metric's actual direction (higher, lower, or zero-is-best).
+With two predictions, it performs a **paired comparison**: both models see the same bootstrap target/reference draw and the same scorer seed in each replicate. It then reports the fraction of bootstrap replicates in which model B beats model A using each ranking metric's actual direction (higher, lower, or zero-is-best).
 
 ## Why this is different from scorer-seed stability
 
@@ -29,7 +29,7 @@ For T3, use `--wt matched_wt.h5ad`.
 Outputs:
 
 - `replicates.json` — every bootstrap scorer result;
-- `summary.csv` — confidence intervals, SDs, paired improvement deltas and `P(B better)`;
+- `summary.csv` — confidence intervals, SDs, paired improvement deltas and `bootstrap B-better fraction`;
 - `report.md` — concise human-readable table.
 
 ## Statistical interpretation
