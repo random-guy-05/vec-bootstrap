@@ -71,4 +71,4 @@ def test_cli_runs_real_veckit_paired_bootstrap(tmp_path):
     )
     assert run.returncode == 0, run.stdout + run.stderr
     assert (out / "summary.csv").exists()
-    assert "P(B better)" in (out / "report.md").read_text()
+    assert "bootstrap B-better fraction" in (out / "report.md").read_text()
