@@ -42,4 +42,4 @@ def test_paired_summary_reports_bootstrap_win_fraction():
     ]
     rows = {row["metric"]: row for row in summarize(records, "T1", 0.95)}
     assert rows["de_score"]["b_better_fraction"] == 1.0
-    assert rows["mmd_u"]["p_b_better"] == 1.0
+    assert rows["mmd_u"]["b_better_fraction"] == 1.0
